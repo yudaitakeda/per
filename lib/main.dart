@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart'; //繋げたいファイルはここでインポートする
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WidgetExample(),
+      home: WidgetExample(), //アプリの初期画面として表示されるウィジェットを指定している
     );
   }
 }
@@ -22,6 +23,23 @@ class MyApp extends StatelessWidget {
 class WidgetExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      //この中に表示したいウィジェットを記述する
+      appBar: AppBar(
+        title: Text('Current Page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            // home.dartファイル内のHomePageウィジェットを表示
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+            );
+          },
+          child: Text('Go to Home Page!'),
+        ),
+      ),
+    );
   }
 }
