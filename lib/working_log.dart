@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
+// HomePageクラスはStatefulWidgetを拡張しています。
+// StatefulWidgetはウィジェットが変更可能な状態を持つことを意味します。
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
