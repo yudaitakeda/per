@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart'; //繋げたいファイルはここでインポートする
+import 'working_log.dart'; //繋げたいファイルはここでインポートする
 
 void main() {
   runApp(const MyApp());
