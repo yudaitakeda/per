@@ -26,7 +26,7 @@ class WidgetExample extends StatelessWidget {
     return Scaffold(
       //この中に表示したいウィジェットを記述する
       appBar: AppBar(
-        title: Text('Current Page'),
+        title: Text('home Page'),
       ),
       body: Center(
         child: ElevatedButton(
