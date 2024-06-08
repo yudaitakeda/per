@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Workout Log'), // アプリバーのタイトルを設定
+        title: Text('筋トレ記録カレンダー'), // アプリバーのタイトルを設定
       ),
       body: Column(
         children: [
