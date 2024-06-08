@@ -26,18 +26,18 @@ class WidgetExample extends StatelessWidget {
     return Scaffold(
       //この中に表示したいウィジェットを記述する
       appBar: AppBar(
-        title: Text('home Page'),
+        title: Text('ようこそ！筋トレアプリへ！'),
       ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // home.dartファイル内のHomePageウィジェットを表示
+            // working.dartファイル内のHomePageウィジェットを表示
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => HomePage()),
             );
           },
-          child: Text('Go to Home Page!'),
+          child: Text('筋トレ状況を確認する！'),
         ),
       ),
     );
