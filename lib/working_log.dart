@@ -123,7 +123,6 @@ class _HomePageState extends State<HomePage> {
             },
             child: Text('ホームに戻る'),
           ),
-
           Expanded(
             child: Center(
               child: Text(
