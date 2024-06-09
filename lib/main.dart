@@ -26,7 +26,7 @@ class WidgetExample extends StatelessWidget {
     return Scaffold(
       //この中に表示したいウィジェットを記述する
       appBar: AppBar(
-        title: Text('ようこそ！筋トレアプリへ！'),
+        title: Text('筋トレ管理アプリ(仮)'),
       ),
       body: Center(
         child: Column(
@@ -50,7 +50,7 @@ class WidgetExample extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
-              child: Text('筋トレ状況を確認する！'),
+              child: Text('筋トレ状況の確認'),
             ),
           ],
         ),
