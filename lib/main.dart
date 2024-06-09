@@ -40,7 +40,7 @@ class WidgetExample extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
-              child: Text('追加ボタンtest'),
+              child: Text('RM換算'),
             ),
             ElevatedButton(
               onPressed: () {
