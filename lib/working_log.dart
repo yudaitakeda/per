@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
               child: TextField(
                 controller: _textController, // テキストフィールドのコントローラを設定
                 decoration: InputDecoration(
-                  labelText: 'イベントを追加', // テキストフィールドのラベルを設定
+                  labelText: '種目名・重量・回数', // テキストフィールドのラベルを設定
                   suffixIcon: IconButton(
                     icon: Icon(Icons.add), // アイコンを設定
                     onPressed: () {
