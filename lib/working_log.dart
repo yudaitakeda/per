@@ -55,7 +55,8 @@ class _HomePageState extends State<HomePage> {
                 _selectedDay != null
                     // 選択された日付があればその日付を表示し、なければ「No Day Selected」と表示
                     ? 'Selected Day: ${_selectedDay!.toString().split(' ')[0]}'
-                    : 'No Day Selected',
+                    : '日付が選択されていません',
+                //選択された日にちのメモを表示させたい
                 style: TextStyle(fontSize: 20), // テキストのスタイルを設定
               ),
             ),
