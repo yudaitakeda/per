@@ -29,15 +29,30 @@ class WidgetExample extends StatelessWidget {
         title: Text('ようこそ！筋トレアプリへ！'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // working.dartファイル内のHomePageウィジェットを表示
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => HomePage()),
-            );
-          },
-          child: Text('筋トレ状況を確認する！'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, //中央に配置
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                // working.dartファイル内のHomePageウィジェットを表示
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: Text('追加ボタンtest'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // working.dartファイル内のHomePageウィジェットを表示
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: Text('筋トレ状況を確認する！'),
+            ),
+          ],
         ),
       ),
     );
