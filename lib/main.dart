@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'working_log.dart'; //繋げたいファイルはここでインポートする
+import 'rm.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +38,7 @@ class WidgetExample extends StatelessWidget {
                 // working.dartファイル内のHomePageウィジェットを表示
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => Rmstate()),
                 );
               },
               child: Text('RM換算'),
