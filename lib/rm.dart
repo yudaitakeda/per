@@ -15,10 +15,16 @@ class _RmState extends State<Rmstate> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Second Page'),
+        title: const Text('RM換算'),
       ),
-      body: const Center(
-        child: Text('This is the second page'),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text('RM換算画面です'),
+          ),
+        ],
       ),
     );
   }
