@@ -12,11 +12,9 @@ class Rmstate extends StatefulWidget {
 // Stateクラスを定義
 class _RmState extends State<Rmstate> {
   // TextEditingControllerを定義（重量入力用）
-  TextEditingController _weightController =
-      TextEditingController(); // TextEditingControllerが型、_repsControllerが変数名、TextEditingController()が初期値
+  final TextEditingController _weightController = TextEditingController();
   // TextEditingControllerを定義（回数入力用）
-  TextEditingController _repsController =
-      TextEditingController(); // TextEditingControllerが型、_repsControllerが変数名、TextEditingController()が初期値
+  final TextEditingController _repsController = TextEditingController();
 
   // 計算結果を保持する変数
   double? _result;
@@ -47,8 +45,7 @@ class _RmState extends State<Rmstate> {
           // 説明テキスト
           const Padding(
             padding: EdgeInsets.all(8.0),
-            child: Text(
-                'RM換算を行う画面です\nRMとは最大可能反復回数を表します。1回持ち上げるのが限界の負荷を1RM、なんとか5回繰り返せる負荷を5RMというように表します。'),
+            child: Text('RM換算を行う画面です'),
           ),
           // 重量入力フィールド
           Padding(
