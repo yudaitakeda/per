@@ -29,8 +29,8 @@ class _RmState extends State<Rmstate> {
     // 計算結果をセット
     setState(() {
       _result1 = weight * reps / 40 + weight;
-      _result5 = 0.85 * (weight * reps / 40 + weight);
-      _result10 = 0.75 * (weight * reps / 40 + weight);
+      _result5 = _result1! * 0.9;
+      _result10 = _result1! * 0.8;
     });
   }
 
@@ -58,7 +58,7 @@ class _RmState extends State<Rmstate> {
               controller: _weightController,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'weight(kg)を入力してください',
+                labelText: '重量(kg)を入力してください',
               ),
               keyboardType: TextInputType.number,
             ),
@@ -88,6 +88,13 @@ class _RmState extends State<Rmstate> {
             padding: const EdgeInsets.all(10.0),
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                'ベンチプレスのRM換算結果',
+                style: const TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               Text(
                 '1RM = ${_result1 != null ? _result1.toString() : ''}kg',
                 style: const TextStyle(
