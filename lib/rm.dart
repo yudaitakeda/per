@@ -58,7 +58,7 @@ class _RmState extends State<Rmstate> {
               controller: _weightController,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: '重量を入力してください',
+                labelText: 'weight(kg)を入力してください',
               ),
               keyboardType: TextInputType.number,
             ),
@@ -70,7 +70,7 @@ class _RmState extends State<Rmstate> {
               controller: _repsController,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: '回数を入力してください',
+                labelText: 'rep数を入力してください',
               ),
               keyboardType: TextInputType.number,
             ),
@@ -85,25 +85,25 @@ class _RmState extends State<Rmstate> {
           ),
           // 計算結果の表示
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
               Text(
-                '1RM = ${_result1 != null ? _result1.toString() : ''}',
+                '1RM = ${_result1 != null ? _result1.toString() : ''}kg',
                 style: const TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                '5RM = ${_result5 != null ? _result5.toString() : ''}',
+                '5RM = ${_result5 != null ? _result5.toString() : ''}kg',
                 style: const TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                '10RM = ${_result10 != null ? _result10.toString() : ''}',
+                '10RM = ${_result10 != null ? _result10.toString() : ''}kg',
                 style: const TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
