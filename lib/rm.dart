@@ -17,8 +17,9 @@ class _RmState extends State<Rmstate> {
   final TextEditingController _repsController = TextEditingController();
 
   // 計算結果を保持する変数
-  double? _result;
-
+  double? _result1;
+  double? _result5;
+  double? _result10;
   // ボタンが押されたときの処理
   void _calculate() {
     // 重量の入力を取得し、数値に変換。無効な場合は0を使用
@@ -27,7 +28,9 @@ class _RmState extends State<Rmstate> {
     final int reps = int.tryParse(_repsController.text) ?? 0;
     // 計算結果をセット
     setState(() {
-      _result = weight * reps / 40 + weight;
+      _result1 = weight * reps / 40 + weight;
+      _result5 = 0.85 * (weight * reps / 40 + weight);
+      _result10 = 0.75 * (weight * reps / 40 + weight);
     });
   }
 
@@ -83,13 +86,30 @@ class _RmState extends State<Rmstate> {
           // 計算結果の表示
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(
-              '1RM = ${_result != null ? _result.toString() : ''}',
-              style: const TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Text(
+                '1RM = ${_result1 != null ? _result1.toString() : ''}',
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
+              Text(
+                '5RM = ${_result5 != null ? _result5.toString() : ''}',
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '10RM = ${_result10 != null ? _result10.toString() : ''}',
+                style: const TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ]),
           ),
         ],
       ),
