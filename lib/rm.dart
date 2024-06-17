@@ -45,7 +45,8 @@ class _RmState extends State<Rmstate> {
           // 説明テキスト
           const Padding(
             padding: EdgeInsets.all(8.0),
-            child: Text('RM換算を行う画面です'),
+            child: Text(
+                'RM換算を行う画面です\nRMとは最大可能反復回数を表します。1回持ち上げるのが限界の負荷を1RM、なんとか5回繰り返せる負荷を5RMというように表します。'),
           ),
           // 重量入力フィールド
           Padding(
