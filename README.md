@@ -1,6 +1,6 @@
 
 # perdev
-
+これは、筋トレ管理アプリです。main.dartがホーム画面、rorking_log.dartが筋トレ実行日程の確認画面、rm.dartがrm換算を行う画面となっています。perディレクトリに移動し、flutter runコマンドを実行してデバッグを行ってください。
 ## Git Rules
 
 ### Prefixes
