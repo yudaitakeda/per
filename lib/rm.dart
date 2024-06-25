@@ -37,8 +37,8 @@ class _RmState extends State<Rmstate> {
       _benchresult5 = _benchresult1! * 0.9;
       _benchresult10 = _benchresult1! * 0.8;
       _squadliftresult1 = weight * reps / 33.3 + weight;
-      _squadliftresult5 = _squadliftresult1! * 0.86;
-      _squadliftresult10 = _squadliftresult1! * 0.75;
+      _squadliftresult5 = _squadliftresult1! * (1.0278 - 0.0278 * 5);
+      _squadliftresult10 = _squadliftresult1! * (1.0278 - 0.0278 * 10);
     });
   }
 
@@ -57,7 +57,7 @@ class _RmState extends State<Rmstate> {
           const Padding(
             padding: EdgeInsets.all(8.0),
             child: Text(
-                'RM換算を行う画面です\nRMとは最大可能反復回数を表します。1回持ち上げるのが限界の負荷を1RM、なんとか5回繰り返せる負荷を5RMというように表します。'),
+                'RM換算を行う画面です。\nRMとは最大可能反復回数を表します。1回持ち上げるのが限界の負荷を1RM、なんとか5回繰り返せる負荷を5RMというように表します。'),
           ),
           // 重量入力フィールド
           Padding(
