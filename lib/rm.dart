@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 // StatefulWidgetを継承するクラスを定義
 class Rmstate extends StatefulWidget {
@@ -106,21 +107,21 @@ class _RmState extends State<Rmstate> {
                   ),
                 ),
                 Text(
-                  '1RM = ${_benchresult1 != null ? _benchresult1!.round() : ''}kg',
+                  '1RM = ${_benchresult1 != null ? _benchresult1!.round().toString() : ''}kg',
                   style: const TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  '5RM = ${_benchresult5 != null ? _benchresult5!.round() : ''}kg',
+                  '5RM = ${_benchresult5 != null ? _benchresult5!.round().toString() : ''}kg',
                   style: const TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  '10RM = ${_benchresult10 != null ? _benchresult10!.round() : ''}kg',
+                  '10RM = ${_benchresult10 != null ? _benchresult10!.round().toString() : ''}kg',
                   style: const TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -143,27 +144,40 @@ class _RmState extends State<Rmstate> {
                   ),
                 ),
                 Text(
-                  '1RM = ${_squadliftresult1 != null ? _squadliftresult1!.round() : ''}kg',
+                  '1RM = ${_squadliftresult1 != null ? _squadliftresult1!.round().toString() : ''}kg',
                   style: const TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  '5RM = ${_squadliftresult5 != null ? _squadliftresult5!.round() : ''}kg',
+                  '5RM = ${_squadliftresult5 != null ? _squadliftresult5!.round().toString() : ''}kg',
                   style: const TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  '10RM = ${_squadliftresult10 != null ? _squadliftresult10!.round() : ''}kg',
+                  '10RM = ${_squadliftresult10 != null ? _squadliftresult10!.round().toString() : ''}kg',
                   style: const TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
+            ),
+          ),
+          // ElevatedButtonを中央に配置
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                // working.dartファイル内のHomePageウィジェットを表示
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => WidgetExample()),
+                );
+              },
+              child: const Text('ホームに戻る'),
             ),
           ),
         ],
