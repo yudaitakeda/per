@@ -46,10 +46,10 @@ class WidgetExample extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // working.dartファイル内のHomePageウィジェットを表示
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Rmstate()),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => Rmstate()),
+                // );
               },
               child: Text('RM換算'),
             ),
