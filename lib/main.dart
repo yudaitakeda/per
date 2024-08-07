@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart'; //firestore
 import 'firebase_options.dart'; // 生成された firebase_options.dart をインポート
 import 'working_log.dart'; // 繋げたいファイル
 import 'rm.dart';
@@ -33,8 +34,9 @@ class WidgetExample extends StatelessWidget {
     return Scaffold(
       // この中に表示したいウィジェットを記述する
       appBar: AppBar(
-        title: Text('筋トレ管理アプリ(仮)'),
+        title: Text('RM計算'),
       ),
+      backgroundColor: Colors.lightBlueAccent, // ここで画面全体の背景色を指定
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center, // 中央に配置
@@ -47,17 +49,13 @@ class WidgetExample extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Rmstate()),
                 );
               },
-              child: Text('目標記入'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                // rm.dartファイル内のRmstateウィジェットを表示
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Rmstate()),
-                );
-              },
-              child: Text('RM換算'),
+              child: Text(
+                'RM換算',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             ElevatedButton(
               onPressed: () {
@@ -67,7 +65,29 @@ class WidgetExample extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => HomePage()),
                 );
               },
-              child: Text('筋トレ状況の確認'),
+              child: Text(
+                '目標記入(後日実装)',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // rm.dartファイル内のRmstateウィジェットを表示
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Rmstate()),
+                );
+              },
+              child: Text(
+                '筋トレ状況の確認(後日実装)',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ],
         ),
