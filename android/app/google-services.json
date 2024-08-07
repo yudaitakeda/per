@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "830196510520",
+    "project_id": "kintore-5dcc4",
+    "storage_bucket": "kintore-5dcc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830196510520:android:f9f806f52b056cf7279bcd",
+        "android_client_info": {
+          "package_name": "com.flutter.kintore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFsNUsLt7OLhN4Pas_JeD58LOy7qsFEKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

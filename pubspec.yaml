@@ -36,6 +36,7 @@ dependencies:
   table_calendar: ^3.0.8 #table calendarのパッケージ追加
   cupertino_icons: ^1.0.6
   firebase_core: ^3.1.0
+  firebase_auth: ^5.0.0
 
 dev_dependencies:
   flutter_test:
