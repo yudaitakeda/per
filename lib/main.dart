@@ -58,13 +58,7 @@ class WidgetExample extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: () {
-                // working_log.dartファイル内のHomePageウィジェットを表示
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
+              onPressed: () {},
               child: Text(
                 '目標記入(後日実装)',
                 style: TextStyle(
@@ -74,13 +68,7 @@ class WidgetExample extends StatelessWidget {
               ),
             ),
             ElevatedButton(
-              onPressed: () {
-                // rm.dartファイル内のRmstateウィジェットを表示
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Rmstate()),
-                );
-              },
+              onPressed: () {},
               child: Text(
                 '筋トレ状況の確認(後日実装)',
                 style: TextStyle(
