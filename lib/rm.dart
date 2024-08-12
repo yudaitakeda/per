@@ -39,7 +39,7 @@ class _RmState extends State<Rmstate> {
       _benchresult10 = _benchresult1! * 0.8;
       _squadliftresult1 = weight * reps / 33.3 + weight;
       _squadliftresult5 = _squadliftresult1! * (1.0278 - 0.0278 * 5);
-      _squadliftresult10 = _squadliftresult1! * (1.0278 - 0.0278 * 10);
+      _squadliftresult10 = _squadliftresult1! * (1.0278 - 0.0278 * 10) + 1;
     });
   }
 
@@ -51,6 +51,7 @@ class _RmState extends State<Rmstate> {
         title: const Text('RM換算'),
       ),
       // BodyにColumnを使用してウィジェットを縦に並べる
+      backgroundColor: Colors.lightBlueAccent, // ここで画面全体の背景色を指定
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
